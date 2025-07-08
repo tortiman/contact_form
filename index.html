@@ -12,55 +12,73 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    <main>
-      <form action="">
-        <section>
-          <h1></h1>
-          <div class="form-group-name">
-            <div class="first-name">
-              <label for="first-name">First Name <span>*</span></label>
-              <input type="text" id="first-name" required />
-              <span class="error-required">This field is required</span>
-            </div>
-            <div class="last-name">
-              <label for="last-name">Last Name <span>*</span></label>
-              <input type="text" id="last-name" required />
-              <span class="error-required">This field is required</span>
-            </div>
-          </div>
-          <div class="email-group">
-            <label for="email"
-              >Email Address <span class="required">*</span></label
-            >
-            <input type="text" id="email" />
-            <span class="error-email">Please enter a valid email address</span>
-          </div>
-          <fieldset>
-            <legend>Query Type <span class="required">*</span></legend>
-
+    <section class="success" hidden>
+      <div class="head">
+        <img src="" alt="" />
+        <p class="message-sent">Message Sent!</p>
+      </div>
+      <p class="thanks">
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
+    </section>
+    <form action="">
+      <h1>Contact Us</h1>
+      <div class="form-group-name">
+        <div class="first-name">
+          <label for="first-name">First Name <span>*</span></label>
+          <input type="text" id="first-name" required />
+          <span class="error-required">This field is required</span>
+        </div>
+        <div class="last-name">
+          <label for="last-name">Last Name <span>*</span></label>
+          <input type="text" id="last-name" required />
+          <span class="error-required">This field is required</span>
+        </div>
+      </div>
+      <div class="email-group">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="text" id="email" />
+        <span class="error-email">Please enter a valid email address</span>
+      </div>
+      <div class="query">
+        <span>Query Type <span class="required">*</span></span>
+        <div class="btnContainer">
+          <button class="btn-general-enquiry">
             <input type="radio" id="general-enquiry" name="query" /><label
               for="general-enquiry"
               >General Enquiry</label
             >
+          </button>
+          <button class="btn-support-request">
             <input type="radio" id="support-request" name="query" /><label
               for="support-request"
               >Support Request</label
             >
-          </fieldset>
-          <label for="message">Message <span class="required">*</span></label>
-          <textarea name="message" id="message"></textarea>
-          <input type="checkbox" name="consent" id="consent" /><label
-            for="consent"
-            >I consent to being contacted by the team
-            <span class="required">*</span></label
-          >
-          <button type="submit" class="btnSubmit">Submit</button>
-        </section>
-      </form>
-    </main>
+          </button>
+        </div>
+      </div>
+      <div class="message-textArea">
+        <label for="message">Message <span class="required">*</span></label>
+        <textarea name="message" id="message"></textarea>
+      </div>
+      <div class="consent">
+        <input type="checkbox" name="consent" id="consent" /><label
+          for="consent"
+          >I consent to being contacted by the team
+          <span class="required">*</span></label
+        >
+      </div>
+      <button type="submit" class="btnSubmit">Submit</button>
+    </form>
   </body>
 </html>
 
@@ -90,5 +108,5 @@
   Submit
 
   Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  
    -->

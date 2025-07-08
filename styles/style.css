@@ -1,0 +1,148 @@
+:root{
+    --GreenPrimary200lighter: hsl(148, 38%, 91%);
+    --GreenPrimary600medium: hsl(169, 82%, 27%);
+    --RedPrimary: hsl(0, 66%, 54%);
+    --WhiteNeutral: hsl(0, 0%, 100%);
+    --Greyeutral500medium: hsl(186, 15%, 59%);
+    --Greyeutral900darker: hsl(187, 24%, 22%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color: var(--GreenPrimary200lighter);
+    font-family: 'karla', monospace;
+}
+
+section{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+form{
+    position: absolute;
+    transform: translate(-50%,20%);
+    left: 50%;
+    top: 1%;
+    width: 16.25em;
+    height: 49.69em;
+    border-radius: 0.625em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--WhiteNeutral);
+    gap: 10px;
+    padding: 20px 18px 18px 18px;
+}
+
+.form-group-name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.first-name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.last-name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.email-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.query{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btnContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.btn-general-enquiry{
+    background-color: var(--WhiteNeutral);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'karla';
+}
+
+.btn-support-request{
+    background-color: var(--WhiteNeutral);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'karla';
+}
+
+.message-textArea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#first-name,
+#last-name,
+#email,
+#general-enquiry,
+#support-request{
+    height: 40px;
+}
+
+.btnSubmit{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--GreenPrimary600medium);
+    color: var(--WhiteNeutral);
+    font-size: 16px;
+    font-family: 'karla';
+}
+
+#message{
+    height: 175px;
+    border-radius: 5px;
+}
+
+.error-required{
+    visibility: hidden;
+}
+
+label{
+    font-size: clamp(15px,4vw,16px);
+}
