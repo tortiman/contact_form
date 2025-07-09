@@ -21,9 +21,9 @@
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
-    <section class="success" hidden>
+    <section class="success">
       <div class="head">
-        <img src="" alt="" />
+        <img src="./assets/images/icon-success-check.svg" alt="" />
         <p class="message-sent">Message Sent!</p>
       </div>
       <p class="thanks">
@@ -65,14 +65,17 @@
             >
           </button>
         </div>
+        <span class="error-required">Please select a query type</span>
       </div>
       <div class="message-textArea">
         <label for="message">Message <span class="required">*</span></label>
         <textarea name="message" id="message"></textarea>
+        <span class="error-required">This field is required</span>
       </div>
       <div class="consent">
         <input type="checkbox" name="consent" id="consent" /><label
           for="consent"
+          class="lbl-consent"
           >I consent to being contacted by the team
           <span class="required">*</span></label
         >
