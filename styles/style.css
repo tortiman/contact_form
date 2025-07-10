@@ -131,6 +131,7 @@ form{
     border: 0.0625em solid var(--Greyeutral500medium);
     border-radius: 0.3125em;
     padding-left: 0.625em;
+    height: 38px;
 }
 
 .btn-support-request{
@@ -145,6 +146,7 @@ form{
     border: 0.0625em solid var(--Greyeutral500medium);
     border-radius: 0.3125em;
     padding-left: 0.625em;
+    height: 38px;
 }
 
 .message-textArea{
@@ -176,8 +178,8 @@ form{
     justify-content: space-between;
     flex-direction: column;
     gap: 0.5em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 0.6em;
+    padding-bottom: 0.7em;
 }
 
 .consent{
@@ -210,6 +212,7 @@ form{
 
 .required{
     color: var(--GreenPrimary600medium);
+    font-size: 1.1em;
 }
 
 .error-required{
@@ -301,9 +304,14 @@ input[type="checkbox"]{
     }
 
     .consent-error{
-        padding: 1.5625em 0;
-        gap: 0.3125em;
+        
+        gap: 0.8125em;
+        padding-top: 2.25em;
+        padding-bottom: 2em;
     }
 
+    .required{
+        font-size: 1.1em;
+    }
 
 }
