@@ -49,14 +49,13 @@ section{
 }
 
 .success p{
-    font-size: 9px;
+    font-size: 0.5625em;
 }
 
 form{
     position: absolute;
     transform: translate(-50%,4%);
     left: 50%;
-    /* top: 1%; */
     width: 16.25em;
     height: 49.69em;
     border-radius: 0.625em;
@@ -65,8 +64,11 @@ form{
     justify-content: start;
     align-items: start;
     background-color: var(--WhiteNeutral);
-    /* gap: 10px; */
-    padding: 1.25em 1.125em 1.125em 1.125em;
+    /* padding: 1.25em 1.125em 1.125em 1.125em; */
+    padding-top: clamp(1.25em, 4vw, 2.5em);
+    padding-right: clamp(1.125em, 4vw, 2.1875em);
+    padding-bottom: clamp(1.125em, 4vw, 2em);
+    padding-left: clamp(1.125em, 4vw, 2.1875em );
 }
 
 .form-group-name{
@@ -75,7 +77,6 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    /* gap: 5px; */
     padding-top: 1.5em;
 }
 
@@ -84,7 +85,9 @@ form{
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    
 }
+
 
 .last-name{
     width: 100%;
@@ -99,7 +102,7 @@ form{
     flex-direction: column;
     width: 100%;
     gap: 0.5em;
-    padding-top: 0.5em;
+    padding-top: clamp(0.5em, 2.5vw, 1em);
 }
 
 .query{
@@ -107,7 +110,7 @@ form{
     flex-direction: column;
     width: 100%;
     gap: 0.5em;
-    padding-top: 0.5em;
+    padding-top: clamp(0.5em, 2.5vw, 1em);
 }
 
 .btnContainer{
@@ -131,8 +134,23 @@ form{
     border: 0.0625em solid var(--Greyeutral500medium);
     border-radius: 0.3125em;
     padding-left: 0.625em;
-    height: 38px;
+    height: 2.375em;
+    cursor: pointer;
 }
+
+.btn-general-enquiry:hover,
+.btn-support-request:hover{
+    background-color: var(--GreenPrimary200lighter);
+    border: 0.0625em solid var(--GreenPrimary600medium);
+}
+
+.btn-general-enquiry:focus,
+.btn-support-request:focus{
+    background-color: var(--GreenPrimary200lighter);
+    border: 0.0625em solid var(--GreenPrimary600medium);
+    outline: none;
+}
+
 
 .btn-support-request{
     background-color: var(--WhiteNeutral);
@@ -146,15 +164,18 @@ form{
     border: 0.0625em solid var(--Greyeutral500medium);
     border-radius: 0.3125em;
     padding-left: 0.625em;
-    height: 38px;
+    height: 2.375em;
+    cursor: pointer;
 }
+
+
 
 .message-textArea{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    padding-top: 0.5em;
+    padding-top: clamp(0.5em, 2.5vw, 1em);
 }
 
 #first-name,
@@ -165,13 +186,22 @@ form{
     border: 0.0625em solid var(--Greyeutral500medium);
     border-radius: 0.3125em;
     cursor: pointer;
+    padding-left: 1em;
 }
 
-#general-enquiry,
-#support-request{
-    height: 2.5em;
-
+#first-name:hover,
+#last-name:hover,
+#email:hover{
+    border: 0.0625em solid var(--GreenPrimary600medium);
 }
+
+#first-name:focus,
+#last-name:focus,
+#email:focus{
+    border: 0.0625em solid var(--GreenPrimary600medium);
+    outline: none;
+}
+
 
 .consent-error{
     display: flex;
@@ -184,14 +214,23 @@ form{
 
 .consent{
     display: flex;
-    gap: 15px;
+    gap: 1em;
+}
+
+.lbl-consent{
+    cursor: pointer;
+    
+}
+
+.lbl-consent:hover{
+    color: var(--GreenPrimary600medium);
 }
 
 .btnSubmit{
     width: 100%;
-    height: 40px;
+    height: 2.5em;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125em;
     background-color: var(--GreenPrimary600medium);
     color: var(--WhiteNeutral);
     font-size: 0.94em;
@@ -203,12 +242,25 @@ form{
     height: 10.9375em;
     border-radius: 0.3125em;
     resize: none;
+    padding-left: 1em;
+    padding-top: 0.625em;
+    padding-right: 1em;
+}
+
+#message:hover{
+    border: 0.0625em solid var(--GreenPrimary600medium);
+}
+
+#message:focus{
+    outline: none;
+    border: 0.0625em solid var(--GreenPrimary600medium);
 }
 
 #general-enquiry,
 #support-request{
     cursor: pointer;
 }
+
 
 .required{
     color: var(--GreenPrimary600medium);
@@ -228,11 +280,11 @@ form{
 }
 
 label{
-    font-size: 0.6875em;
+    font-size: clamp(0.6875em, 2.5vw, 0.8em);
 }
 
 span{
-    font-size: 0.6875em;
+    font-size: clamp(0.6875em, 2.5vw, 0.8em);
 }
 
 .btnContainer label{
@@ -241,6 +293,8 @@ span{
 
 input[type="checkbox"]{
     cursor: pointer;
+    accent-color: var(--GreenPrimary600medium);
+    
 }
 
 @media (min-width:48em){
@@ -255,10 +309,7 @@ input[type="checkbox"]{
         margin-top: 6.875em;
         width: 40.2em;
         height: 44.375em;
-        padding-top: 2.5em;
-        padding-right: 2.1875em;
-        padding-bottom: 2em;
-        padding-left: 2.1875em;
+       
     }
 
     .form-group-name{
@@ -266,12 +317,9 @@ input[type="checkbox"]{
         gap: 0.9375em;
     }
 
-    .first-name{
-        gap: 0.625em;
-    }
-
+    
     .last-name{
-        gap: 0.625em;
+       
         padding: 0;
     }
 
@@ -290,18 +338,12 @@ input[type="checkbox"]{
 
     .email-group{
         padding-top: 20px;
-        gap: 10px;
+        /* gap: 10px; */
     }
 
-    .query{
-        padding-top: 1.25em;
-        gap: 0.625em;
-    }
+    
 
-    .message-textArea{
-        padding-top: 1.25em;
-        gap: 0.625em;
-    }
+    
 
     .consent-error{
         
