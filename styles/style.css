@@ -23,29 +23,29 @@ section{
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%,10%);
-    height: 60px;
-    width: 260px;
+    transform: translate(-50%,5%);
+    height: 5em;
+    width: 16.25em;
     background-color: var(--Greyeutral900darker);
     z-index: 1000;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 0.625em;
+    padding: 0.625em;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625em;
     color: var(--WhiteNeutral);
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .head{
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 10px;
+    gap: 0.625em;
 }
 
 .success .head p{
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .success p{
@@ -54,7 +54,7 @@ section{
 
 form{
     position: absolute;
-    transform: translate(-50%,5%);
+    transform: translate(-50%,4%);
     left: 50%;
     /* top: 1%; */
     width: 16.25em;
@@ -66,7 +66,7 @@ form{
     align-items: start;
     background-color: var(--WhiteNeutral);
     /* gap: 10px; */
-    padding: 20px 18px 18px 18px;
+    padding: 1.25em 1.125em 1.125em 1.125em;
 }
 
 .form-group-name{
@@ -76,35 +76,38 @@ form{
     justify-content: center;
     align-items: start;
     /* gap: 5px; */
-    padding-top: 25px;
+    padding-top: 1.5em;
 }
 
 .first-name{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.5em;
 }
 
 .last-name{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.5em;
+    padding-top: 0.3125em;
 }
 
 .email-group{
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 5px;
+    gap: 0.5em;
+    padding-top: 0.5em;
 }
 
 .query{
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 5px;
+    gap: 0.5em;
+    padding-top: 0.5em;
 }
 
 .btnContainer{
@@ -112,8 +115,8 @@ form{
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    gap: 8px;
-    
+    gap: 0.5em;
+
 }
 
 .btn-general-enquiry{
@@ -121,13 +124,13 @@ form{
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 10px;
+    gap: 1.125em;
     width: 100%;
-    font-size: 16px;
+    font-size: 1em;
     font-family: 'karla';
-    border: 1px solid var(--Greyeutral500medium);
-    border-radius: 5px;
-    padding-left: 10px;
+    border: 0.0625em solid var(--Greyeutral500medium);
+    border-radius: 0.3125em;
+    padding-left: 0.625em;
 }
 
 .btn-support-request{
@@ -135,46 +138,52 @@ form{
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 10px;
+    gap: 1.125em;
     width: 100%;
-    font-size: 16px;
+    font-size: 1em;
     font-family: 'karla';
-    border: 1px solid var(--Greyeutral500medium);
-    border-radius: 5px;
-    padding-left: 10px;
+    border: 0.0625em solid var(--Greyeutral500medium);
+    border-radius: 0.3125em;
+    padding-left: 0.625em;
 }
 
 .message-textArea{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.5em;
+    padding-top: 0.5em;
 }
 
 #first-name,
 #last-name,
 #email
 {
-    height: 40px;
-    border: 1px solid var(--Greyeutral500medium);
-    border-radius: 5px;
+    height: 2.5em;
+    border: 0.0625em solid var(--Greyeutral500medium);
+    border-radius: 0.3125em;
     cursor: pointer;
 }
 
 #general-enquiry,
 #support-request{
-    height: 40px;
-    
+    height: 2.5em;
+
+}
+
+.consent-error{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .consent{
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding-bottom: 30px;
+    gap: 15px;
 }
-
-
 
 .btnSubmit{
     width: 100%;
@@ -183,14 +192,14 @@ form{
     border-radius: 5px;
     background-color: var(--GreenPrimary600medium);
     color: var(--WhiteNeutral);
-    font-size: 16px;
+    font-size: 0.94em;
     font-family: 'karla';
     cursor: pointer;
 }
 
 #message{
-    height: 175px;
-    border-radius: 5px;
+    height: 10.9375em;
+    border-radius: 0.3125em;
     resize: none;
 }
 
@@ -199,24 +208,32 @@ form{
     cursor: pointer;
 }
 
+.required{
+    color: var(--GreenPrimary600medium);
+}
+
 .error-required{
     /* visibility: hidden; */
+    color: var(--RedPrimary);
 }
+
+
 
 .error-email{
     /* visibility: hidden; */
+    color: var(--RedPrimary);
 }
 
 label{
-    font-size: 13px;
+    font-size: 0.6875em;
 }
 
 span{
-    font-size: 13px;
+    font-size: 0.6875em;
 }
 
 .btnContainer label{
-    font-size: 16px;
+    font-size:  0.875em;
 }
 
 input[type="checkbox"]{
@@ -227,31 +244,66 @@ input[type="checkbox"]{
     section{
         width: 24.69em;
         height: 5.94em;
-        margin-top: 40px;
-        padding: 23px;
+        margin-top: 2.5em;
+        padding: 1.4375em;
     }
 
     form{
-        margin-top: 110px;
+        margin-top: 6.875em;
         width: 40.2em;
-        height: 42.5em;
-        padding-top: 40px;
-        padding-right: 35px;
-        padding-bottom: 35px;
-        padding-left: 35px;
+        height: 44.375em;
+        padding-top: 2.5em;
+        padding-right: 2.1875em;
+        padding-bottom: 2em;
+        padding-left: 2.1875em;
     }
 
     .form-group-name{
         flex-direction: row;
-        gap: 15px;
+        gap: 0.9375em;
+    }
+
+    .first-name{
+        gap: 0.625em;
+    }
+
+    .last-name{
+        gap: 0.625em;
+        padding: 0;
     }
 
     .btnContainer{
         flex-direction: row;
-        gap: 15px;
+        gap: 0.9375em;
     }
 
     .success p{
-    font-size: 13px;
-}
+    font-size: 0.8125em;
+    }
+
+    #message{
+        height: 5.625em;
+    }
+
+    .email-group{
+        padding-top: 20px;
+        gap: 10px;
+    }
+
+    .query{
+        padding-top: 1.25em;
+        gap: 0.625em;
+    }
+
+    .message-textArea{
+        padding-top: 1.25em;
+        gap: 0.625em;
+    }
+
+    .consent-error{
+        padding: 1.5625em 0;
+        gap: 0.3125em;
+    }
+
+
 }

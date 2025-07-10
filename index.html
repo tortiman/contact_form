@@ -23,7 +23,7 @@
   <body>
     <section class="success">
       <div class="head">
-        <img src="./assets/images/icon-success-check.svg" alt="" />
+        <img src="./assets/images/icon-success-check.svg" alt="icon success" />
         <p class="message-sent">Message Sent!</p>
       </div>
       <p class="thanks">
@@ -34,19 +34,42 @@
       <h1>Contact Us</h1>
       <div class="form-group-name">
         <div class="first-name">
-          <label for="first-name">First Name <span>*</span></label>
-          <input type="text" id="first-name" required />
+          <label for="first-name"
+            >First Name
+            <span class="required" aria-hidden="true">*</span></label
+          >
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            required
+            autocomplete="first-name"
+          />
           <span class="error-required">This field is required</span>
         </div>
         <div class="last-name">
-          <label for="last-name">Last Name <span>*</span></label>
-          <input type="text" id="last-name" required />
+          <label for="last-name"
+            >Last Name <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            required
+            autocomplete="last-name"
+          />
           <span class="error-required">This field is required</span>
         </div>
       </div>
       <div class="email-group">
         <label for="email">Email Address <span class="required">*</span></label>
-        <input type="email" id="email" />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autocomplete="email"
+        />
         <span class="error-email">Please enter a valid email address</span>
       </div>
       <div class="query">
@@ -69,15 +92,23 @@
       </div>
       <div class="message-textArea">
         <label for="message">Message <span class="required">*</span></label>
-        <textarea name="message" id="message"></textarea>
+        <textarea name="message" id="message" autocomplete="message"></textarea>
         <span class="error-required">This field is required</span>
       </div>
-      <div class="consent">
-        <input type="checkbox" name="consent" id="consent" /><label
-          for="consent"
-          class="lbl-consent"
-          >I consent to being contacted by the team
-          <span class="required">*</span></label
+      <div class="consent-error">
+        <div class="consent">
+          <input
+            type="checkbox"
+            name="consent"
+            id="consent"
+            autocomplete="consent"
+          /><label for="consent" class="lbl-consent"
+            >I consent to being contacted by the team
+            <span class="required">*</span></label
+          >
+        </div>
+        <span class="error-required"
+          >To submit this form, please consent to being contacted</span
         >
       </div>
       <button type="submit" class="btnSubmit">Submit</button>
