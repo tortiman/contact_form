@@ -48,7 +48,7 @@ section{
     font-size: 1em;
 }
 
-.success p{
+.success > p{
     font-size: 0.5625em;
 }
 
@@ -113,10 +113,6 @@ form{
     justify-content: center;
     gap: 0.5em;
     width: 100%;
-}
-
-.query .error-required{
-    font-size: 11px;
 }
 
 
@@ -186,7 +182,7 @@ form{
     background-color: var(--GreenPrimary600medium);
     color: var(--WhiteNeutral);
     font-size: 1em;
-    font-family: 'karla';
+    font-family: 'karla', monospace;
     cursor: pointer;
    
 }
@@ -345,7 +341,7 @@ fieldset label:focus{
     }
 
    
-    .success p{
+    .success > p{
     font-size: 0.8125em;
     }
 
